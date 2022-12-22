@@ -33,7 +33,28 @@ var specialChar = window.confirm("You confirm you want special characters in you
 
 
 
+//lots of IF statements. 
+//first if loop for the results array
+// Vars that include all user options of each category. Array of strings for eat category.
+if (numeric) {
+  resultArray = resultArray.concat(numberArray);
 
+}
+
+if (upperCase) {
+  resultArray = resultArray.concat(upperCaseArray);
+
+}
+
+if (lowerCase) {
+  resultArray = resultArray.concat(lowerCaseArray);
+
+}
+
+if (specialChar) {
+  resultArray = resultArray.concat(specialCharArray);
+
+}
 
 // Write password to the #password input
 function writePassword() {
@@ -49,5 +70,4 @@ generateBtn.addEventListener("click", writePassword);
 
 
 
-
-
+}
