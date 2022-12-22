@@ -31,30 +31,41 @@ var upperCase = window.confirm("You confirm you want Uppercase letters in your p
 var numeric = window.confirm("You confirm you want numbers in your password");
 var specialChar = window.confirm("You confirm you want special characters in your password?");
 
-
-
 //lots of IF statements. 
 //first if loop for the results array
 // Vars that include all user options of each category. Array of strings for eat category.
-if (numeric) {
-  resultArray = resultArray.concat(numberArray);
+    if (numeric) {
+      resultArray = resultArray.concat(numberArray);
 
-}
+    }
 
-if (upperCase) {
-  resultArray = resultArray.concat(upperCaseArray);
+    if (upperCase) {
+      resultArray = resultArray.concat(upperCaseArray);
 
-}
+    }
 
-if (lowerCase) {
-  resultArray = resultArray.concat(lowerCaseArray);
+    if (lowerCase) {
+      resultArray = resultArray.concat(lowerCaseArray);
 
-}
+    }
 
-if (specialChar) {
-  resultArray = resultArray.concat(specialCharArray);
+    if (specialChar) {
+      resultArray = resultArray.concat(specialCharArray);
 
-}
+    }
+    //here we can see the resultArray. 
+    console.log(resultArray);
+    //at least one for loop
+    //if my user yes to include category choose random(Math.random) elements from the array
+    for (var i = 0; i < numberChar; i++) {
+      //added a puch this is appends new elements to the end of an array, and returns the new length of the array. 
+      userArray.push (resultArray[Math.floor(Math.random() * resultArray.length)]); 
+
+    }
+
+    return userArray.join("");
+
+  }
 
 // Write password to the #password input
 function writePassword() {
@@ -70,4 +81,5 @@ generateBtn.addEventListener("click", writePassword);
 
 
 
-}
+
+
